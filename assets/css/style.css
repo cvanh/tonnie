@@ -1,0 +1,34 @@
+.body{
+    margin: 20px;
+    background-color: aqua;
+}
+
+.fonts{ /*dit spreekt wel voor zich zelf dit maakt een font die globaal in de body is toegevoegd oh en van af deze regel begint de template */
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo img {
+    border: 1px solid black;
+}
+.sidebar { /*de side bar links met alle soorten pizza restaurants */
+    margin-top: 5px;
+    min-height: 10px;
+    min-width: 10px;
+    border: 1px solid black ;
+    /* position: static; */
+    float: left;
+    margin-left: 1px;
+}
+/*begin van de artikelen en einde van de template css*/
+
+#artikelen{
+border: 1px solid black;
+float: right;
+min-width: 40px;
+min-height: 80px;
+}
+
+
+
+
+/* einde artikelen */
