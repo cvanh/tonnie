@@ -27,3 +27,5 @@ template is het basis idee van de website en de content heet artikelen of conten
 Ca Va?
 
 changelog:
+
+0.1 heb weer niks gedaan 
