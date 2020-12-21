@@ -30,7 +30,7 @@
 <?php
 $servername = "83.162.165.175";
 $username = "cvanh";//spreekt voor zich zelf
-$password = "XJeuLU75Vp2EZbM"; //spreekt voor zich zelf
+$password = "redacted"; //spreekt voor zich zelf
 $dbname = "comments";// database naam
 $artikel_nummer = "1";//DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
 
