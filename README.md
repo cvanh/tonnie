@@ -28,4 +28,4 @@ Ca Va?
 ccccaxa
 changelog:
 
-0.1 heb weer niks gedaan 
+0.1 taak verdeling verder gedaan
