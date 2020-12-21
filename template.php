@@ -26,17 +26,39 @@
 <div id="artikelen">
     <div id="artikel1">
         <p>hier gaan de artikelen en shit en nog meer maar ik weet niet wat ik hier moet typen ommdat ik de lorum ispsum plugin niet heb.
-            a<br>
-            a<br>
-            a<br>
-            a<br>
-            a<br>
-            a<br>
-            a<br>
-            a<br>
-            a<br>
         </p>
+<?php
+$servername = "83.162.165.175";
+$username = "cvanh";//spreekt voor zich zelf
+$password = "XJeuLU75Vp2EZbM"; //spreekt voor zich zelf
+$dbname = "comments";// database naam
+$artikel_nummer = "1";//DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
 
+//SELECT * FROM `comments` WHERE id_artikel=1 selecteert alle comments onder artikel 1
+// SELECT COUNT(id_artikel) FROM `comments` kijkt hoeveel comments er zijn
+$conn = new mysqli($servername, $username, $password, $dbname); // verbint met de database
+
+if ($conn->connect_error) { // checkt of de connectie gelukt is
+    die("connectie mislukt: " . $conn->connect_error);
+  } 
+
+$sql_query = "SELECT COUNT(id_artikel) FROM `comments`";
+$sql_result = $conn->query($sql_query);
+echo($sql_result);
+// for ($x = 0; $x <= $hoeveel_artikelen; $x++) {
+//     echo "The number is: $x <br>";
+//   } 
+
+
+
+
+
+
+
+
+
+$conn->close(); //sluit de connectie met de database
+?>
         
     </div>
 
