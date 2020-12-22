@@ -3,6 +3,18 @@ gasten boek voor ondernemend gedrag
 
 UREN LOGGEN HOERTJES VIA CLOCKIFY.ME
 
+# to get started do this
+create a file with 
+```<?php
+$username ="school";
+$password ="-dit is niet het wachtwoord maar-";
+
+?>
+```
+
+
+
+taakverdeling:
 baran:
 stylen in overleg met max
 het login systeem maken
@@ -18,7 +30,7 @@ de commentsectie doen
 
 login informatie database
 userna0me:school
-wachtw00rd:school
+wachtw00rd:s{redacted}
 host: http://83.162.165.175
 
 
@@ -29,3 +41,5 @@ ccccaxa
 changelog:
 
 0.1 taak verdeling verder gedaan
+
+0.2 heb de login variable in een externe bestand gedaan

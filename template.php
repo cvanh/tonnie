@@ -28,9 +28,11 @@
         <p>hier gaan de artikelen en shit en nog meer maar ik weet niet wat ik hier moet typen ommdat ik de lorum ispsum plugin niet heb.
         </p>
 <?php
+include 'login.php';
+
 $servername = "83.162.165.175";
-$username = "cvanh";//spreekt voor zich zelf
-$password = "redacted"; //spreekt voor zich zelf
+// $username = "cvanh"; dit is er uit gahaald voor beveileging redenen want dit is het root user 
+// $password = "redacted"; 
 $dbname = "comments";// database naam
 $artikel_nummer = "1";//DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
 
