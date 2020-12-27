@@ -1,15 +1,18 @@
-.fonts{ /*dit spreekt wel voor zich zelf dit maakt een font die globaal in de body is toegevoegd oh en van af deze regel begint de template */
+.fonts {
+    /*dit spreekt wel voor zich zelf dit maakt een font die globaal in de body is toegevoegd oh en van af deze regel begint de template */
     font-family: 'Roboto', sans-serif;
 }
 
 .logo img {
     border: 1px solid black;
 }
-.sidebar { /*de side bar links met alle soorten pizza restaurants */
+
+.sidebar {
+    /*de side bar links met alle soorten pizza restaurants */
     margin-top: 5px;
     /* min-height: 50px;*/
     /* min-width: 30px;  */
-    border: 1px solid black ;
+    border: 1px solid black;
     /* position: static; */
     /* float: left; */
     margin-left: 1px;
@@ -19,19 +22,32 @@
     margin: 0px;
     width: 19%;
 }
+
 /*begin van de artikelen en einde van de template css*/
 
-#artikelen{
-border: 1px solid black;
-float: right;
-width: 80.8%;
-/*min-height: 80px; */
-/* float: right; */
-display: inline-block;
-flex-direction: column;
-padding: 0px;
-margin: 0px;
+#artikelen {
+    border: 1px solid black;
+    float: right;
+    width: 80.8%;
+    /*min-height: 80px; */
+    /* float: right; */
+    display: inline-block;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
 }
+
+#comments {
+    border: 1px solid black;
+    /* float: right; */
+    /* width: 80.8%; */
+
+    display: inline-block;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 
 
