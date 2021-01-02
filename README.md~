@@ -37,14 +37,6 @@ login informatie database
 userna0me:school
 wachtw00rd:s{redacted}
 host: http://83.162.165.175
----
-# uitleg folder structuur
-admin - hier in staan alle dingen die backend zijn zoals de comment moderatie 
-artikelen - hier in staan de artikel paginas die worden getoond als de gebruiker op de lees meer knop druk. dit doen doen wij omdat het anders een clusterfuck wordt als er 100 comments zijn en 20 regels aan artikelen
-page templates - dit spreekt voor zich zelf in deze folder zitten templates voor paginas LET OP DIT KAN IEDER MOMENT VERANDEREN
-assets - hier in staan fotos en shit
-
-
 
 ---
 
