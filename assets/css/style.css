@@ -2,39 +2,71 @@
     /*dit spreekt wel voor zich zelf dit maakt een font die globaal in de body is toegevoegd oh en van af deze regel begint de template */
     font-family: 'Roboto', sans-serif;
 }
+.logo {
+    /* header */
 
+    padding: 20px;
+    text-align: center; /* centreert het logo */
+    background-color: #f1f1f1;
+    border: 1px solid black;
+
+}
 .logo img {
     border: 1px solid black;
+    width: 200px;
+    height: 100px;
 }
 
 .sidebar {
     /*de side bar links met alle soorten pizza restaurants */
     margin-top: 5px;
+    position: absolute;
     /* min-height: 50px;*/
     /* min-width: 30px;  */
-    border: 1px solid black;
     /* position: static; */
     /* float: left; */
     margin-left: 1px;
     display: flex;
     flex-direction: column;
+    width: 131px;
+    
+}
+.sidebar ul { /* opmaak voor het menu */
+    list-style-type: none;
+    background-color: #f1f1f1;
+    text-align: center;
     padding: 0px;
     margin: 0px;
-    width: 19%;
+    border: 1px solid black;
+}
+.sidebar li a { /* opmaak voor het menu */
+    display: block;
+    color: #000;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+.sidebar li a:hover { /* kleur verandering zodra je er met je cursor overheen gaat */
+    background-color: #555;
+    color: white;
 }
 
 /*begin van de artikelen en einde van de template css*/
 
 #artikelen {
     border: 1px solid black;
-    float: right;
-    width: 80.8%;
+    margin-left: 180px;
+    width: 85%;
     /*min-height: 80px; */
     /* float: right; */
     display: inline-block;
     flex-direction: column;
     padding: 0px;
-    margin: 0px;
+    display: flex;
+    margin-top: 150px;
+    background-color: #f1f1f1;
+   
+    
 }
 
 #comments {
