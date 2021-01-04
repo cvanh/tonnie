@@ -70,6 +70,10 @@
                 } else {
                     echo "er zijn nog geen comments geplaats"; //in het geval dat er ooit geen comments zijn omdat je perongeluk alles hebt verwijderd krijg je een error
                 }
+                //TODO: verwijderknopnummer OPVANGEN EN NAAR FUNCTIE DELETE COMMENT
+                function deletecomment (){ // dit verwijderd de comment gebruik de parameter om de comment id 
+
+                }
                 $conn->close();
                 ?>
                 ></div>
