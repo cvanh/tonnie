@@ -22,7 +22,7 @@ $password ="-dit is niet het wachtwoord maar-";
 taakverdeling:
 baran:
 stylen in overleg met max
-het login systeem maken
+hoeft niet meer : het login systeem maken
 
 max:
 stylen in overleg met baran
