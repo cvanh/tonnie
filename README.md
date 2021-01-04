@@ -52,10 +52,4 @@ begrippenlijst
 template is het basis idee van de website en de content heet artikelen of content.
 Ca Va?
 
----
-
-changelog:
-
-0.1 taak verdeling verder gedaan
-
-0.2 heb de login variable in een externe bestand gedaan
+-
