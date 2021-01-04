@@ -36,7 +36,7 @@ de commentsectie doen
 login informatie database
 userna0me:school
 wachtw00rd:s{redacted}
-host: http://83.162.165.175
+host: 83.162.165.175
 ---
 # uitleg folder structuur
 admin - hier in staan alle dingen die backend zijn zoals de comment moderatie 
