@@ -35,7 +35,7 @@
             <br>
             <br>
             <br>
-            <div id='comments'>
+            <div link>maak comment</div>
 
                 <?php
 

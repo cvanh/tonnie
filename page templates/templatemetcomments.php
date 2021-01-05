@@ -36,7 +36,7 @@
             <br>
             <br>
             <div id='comments'>
-
+                <a href="../admin/createcomment.php">plaats comment</a>
                 <?php
 
                 include 'login.php'; //in dit bestanden staan de login gegevens LET OP CHECK OF DIT AL AAN JE .gitignore STAAT
@@ -64,6 +64,15 @@
                 } else {
                     echo "er zijn nog geen comments geplaats";
                 }
+                // INSERT INTO `comment` (`id`, `gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`, `wachtwoord`) VALUES ('$id', '$username', '$date', '$id_comment', '$id_artikel', '$comment', '$score', '$password');
+
+
+
+
+
+
+
+
                 $conn->close();
                 ?>
                 ></div>
