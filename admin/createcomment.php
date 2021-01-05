@@ -30,17 +30,50 @@
     <!--einde template -->
     <div id="artikelen">
         <div id="artikel1">
-            <p>plaats comment</p>
-            <form action="/action_page.php">
+
+            <h1>comment is geplaats</h1>
+            <a href="../tonnys.html">ga terug naar artikelen</a>
+            <br>
+
+
+
+            <?php
+            $username = htmlspecialchars($_POST['gebruikersnaam']);
+            echo("comment is verstuurd met die<br>");
+            // echo htmlspecialchars($_POST['gebruikersnaam']);
+            echo("<br>");
+            echo ($gebruikersnaam);
+            echo htmlspecialchars($_POST['comment']);
+            echo("<br>");
+            echo htmlspecialchars($_POST['wachtwoord']);
+
+            ?>
+
+
+            <!-- <p>plaats comment</p>
+            <form method='post' action="./createcomment.php">
                 <label for="fname">gebruikersnaam</label>
                 <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br><br>
                 <label for="lname">comment</label>
                 <input type="text" id="comment" name="comment"><br><br>
                 <label for="fname">wachtwoord</label>
                 <input type="text" id="wachtwoord" name="wachtwoord"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-<!--INSERT INTO `comment` (`id`, `gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`, `wachtwoord`) VALUES ('$id', '$username', '$date', '$id_comment', '$id_artikel', '$comment', '$score', '$password'); -->
+                <input type="submit" value="Submit"> -->
+            <!-- </form> -->
+            <!--INSERT INTO `comment` (`id`, `gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`, `wachtwoord`) VALUES ('$id', '$username', '$date', '$id_comment', '$id_artikel', '$comment', '$score', '$password'); -->
+            <!--  -->
+            <!-- // if ($_SERVER["REQUEST_METHOD"] =="POST") { //TODO de persoon wordt duur gestuurd met een id en die wordt automatish ingevuld
+            // $gebruikersnaam = gebruikersnaam($_post["gebruikersnaam"]);
+            // $comment = comment($_post["comment"]);
+            // $wachtwoord = wachtwoord($_post["wachtwoord"]);  
+
+            // echo ($gebruikersnaam . $comment . $wachtwoord);
+            // }
+
+            
+
+             -->
+
 
 
         </div>

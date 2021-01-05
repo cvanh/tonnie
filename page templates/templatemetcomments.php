@@ -37,6 +37,17 @@
             <br>
             <div id='comments'>
                 <a href="../admin/createcomment.php">plaats comment</a>
+
+                <form method='post' action="./createcomment.php">
+                <label for="fname">gebruikersnaam</label>
+                <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br><br>
+                <label for="lname">comment</label>
+                <input type="text" id="comment" name="comment"><br><br>
+                <label for="fname">wachtwoord</label>
+                <input type="text" id="wachtwoord" name="wachtwoord"><br><br>
+                <input type="submit" value="Submit"> -->
+            </form>
+
                 <?php
 
                 include 'login.php'; //in dit bestanden staan de login gegevens LET OP CHECK OF DIT AL AAN JE .gitignore STAAT
