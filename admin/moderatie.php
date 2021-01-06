@@ -73,7 +73,7 @@
                 //TODO: verwijderknopnummer OPVANGEN EN NAAR FUNCTIE DELETE COMMENT
                 //function deletecomment (){ // dit verwijderd de comment gebruik de parameter om de comment id 
                 $sqldelete = "DELETE FROM comments WHERE id_comment='commentid'";      //  DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
-                
+               
                 $conn->close();
                 ?>
                 ></div>
