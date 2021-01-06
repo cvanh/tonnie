@@ -36,6 +36,15 @@
             <br>
             <br>
             <div link>maak comment</div>
+            <form method='post' action="./admin/createcomment.php">
+                <label for="fname">gebruikersnaam</label>
+                <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br><br>
+                <label for="lname">comment</label>
+                <input type="text" id="comment" name="comment"><br><br>
+                <label for="fname">wachtwoord</label>
+                <input type="text" id="wachtwoord" name="wachtwoord"><br><br>
+                <input type="submit" value="Submit"> -->
+            </form>
 
                 <?php
 
