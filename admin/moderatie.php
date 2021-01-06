@@ -80,6 +80,7 @@
 
                 $sqldelete = "DELETE FROM comment WHERE id_comment='';";
                 $id_comment = $_GET['verwijder comment'];
+                $commentdelete = $conn ->query($sqldelete); 
 
                 $conn->close();
                 ?>
