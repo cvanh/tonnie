@@ -41,11 +41,11 @@
 
 
                 //  include 'login.php'; //in dit bestanden staan de login gegevens LET OP CHECK OF DIT AL AAN JE .gitignore STAAT
-                 $servername = "83.162.165.175";
-                 $username ="school";
-                 $password ="school";
+                $servername = "83.162.165.175";
+                $username = "school";
+                $password = "school";
                 $dbname = "comments";
-                // $artikel_nummer = "1"; //DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
+                 $artikel_nummer = "1"; //DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
                 // $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
 
                 // Create connection
@@ -55,7 +55,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT * FROM `comments` ORDER BY `id_artikel` ASC"; // haalt alle comments er uit die niet van de correcte artikel zijn
+                $sql = "SELECT * FROM `comment` "; // haalt alle comments er uit die niet van de correcte artikel zijn
 
                 $result = $conn->query($sql); // maakt de echte vraag aan de datbase 
 
@@ -63,17 +63,17 @@
                     // output data of each row
                     while ($row = $result->fetch_assoc()) {
                         // oke dit ziet er ingewikkeld uit maar ik leg het uit: hij maakt een regel aan met de data die die uit de database haalt  
-
+                        echo ("<button class='verwijderknop' id='verwijderknopnummer" . $row["id_comment"] . "'>verwijderen</button>"); // op deze regel maakt die de verwijderknop dit moet je nog aanpassen dat die het opvangt en verwijderd, ik ga niet alles voor je voorkouwen 
                         echo $row["gebruikersnaam"] . " zei op: " . $row["datum"] . " " . $row["comment"];
-                        echo ("<button class='verwijderknop' id='verwijderknopnummer" . $id_comment . "'>verwijderen</button>"); // op deze regel maakt die de verwijderknop dit moet je nog aanpassen dat die het opvangt en verwijderd, ik ga niet alles voor je voorkouwen 
+                        echo("<br>");
                     }
                 } else {
                     echo "er zijn nog geen comments geplaats"; //in het geval dat er ooit geen comments zijn omdat je perongeluk alles hebt verwijderd krijg je een error
                 }
                 //TODO: verwijderknopnummer OPVANGEN EN NAAR FUNCTIE DELETE COMMENT
                 //function deletecomment (){ // dit verwijderd de comment gebruik de parameter om de comment id 
-                $sqldelete = "DELETE FROM comments WHERE id_comment='commentid'";      //  DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
-               
+                // $sqldelete = "DELETE FROM comments WHERE id_comment=' " $id_comment . "'";      //  DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
+
                 $conn->close();
                 ?>
                 ></div>
