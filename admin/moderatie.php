@@ -19,11 +19,9 @@
         <img src="../assets/fotos/logo.png" alt="logo tonny's" width="200px">
     </div>
     <div class="sidebar">
-        <a href="https://www.youtube.com/watch?v=oEOwbuwI4bY" id='dominos-sidebar'>dominos</a>
-        <a href="https://www.youtube.com/watch?v=oEOwbuwI4bY" id='papajones-sidebar'>Papa Jones</a>
-        <a href="https://www.youtube.com/watch?v=oEOwbuwI4bY" id="new-york-sidebar">new york</a>
-        <a href="https://www.youtube.com/watch?v=oEOwbuwI4bY" id='il-forono-sidebar'>Il-forono</a>
-        <a href="https://www.youtube.com/watch?v=oEOwbuwI4bY" id="mehtap-sidebar">Mehtap</a>
+      <ul>
+        
+      </ul>
     </div>
     <!--einde template -->
     <div id="artikelen">
@@ -38,8 +36,7 @@
             <div id='comments'>
 
                 <?php
-
-
+                
                 //  include 'login.php'; //in dit bestanden staan de login gegevens LET OP CHECK OF DIT AL AAN JE .gitignore STAAT
                 $servername = "83.162.165.175";
                 $username = "school";
@@ -75,12 +72,18 @@
                 //TODO: verwijderknopnummer OPVANGEN EN NAAR FUNCTIE DELETE COMMENT
                 //function deletecomment (){ // dit verwijderd de comment gebruik de parameter om de comment id 
                
-                // $sqldelete = "DELETE FROM comments WHERE id_comment={$_POST['comment']}
-            // -- DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
+                $sqldelete = "DELETE FROM comments WHERE id_comment={$_POST['comment']}";
+            // DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
+                //$id_comment = $_GET['verwijder comment'];
+                //$commentdelete = $conn ->query($sqldelete); 
 
-                $sqldelete = "DELETE FROM comment WHERE id_comment='';";
-                $id_comment = $_GET['verwijder comment'];
-                $commentdelete = $conn ->query($sqldelete); 
+                // $sql = "INSERT INTO comment (id, gebruikersnaam, datum, id_comment, id_artikel, comment, score, wachtwoord)
+                // VALUES ('1', 'Maxietaxi', '30/10/2019', '6969', '420' 'blablablabla', '5', '' now())";
+
+
+
+
+
 
                 $conn->close();
                 ?>
@@ -90,6 +93,7 @@
 
     </div>
 
+    <form action="moderatie.php" method="post">
 </body>
 
 </html>

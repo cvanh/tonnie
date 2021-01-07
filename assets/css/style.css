@@ -1,3 +1,6 @@
+body {
+    background-image: url("pizzabackground.jpg");
+}
 .fonts {
     /*dit spreekt wel voor zich zelf dit maakt een font die globaal in de body is toegevoegd oh en van af deze regel begint de template */
     font-family: 'Roboto', sans-serif;
@@ -15,6 +18,20 @@
     border: 1px solid black;
     width: 200px;
     height: 100px;
+} 
+.subtitle {
+    width: 30%;
+    height: 16%;
+    background-color: #494949;
+    margin-left: 34%;
+    margin-top: 1%;
+    border: 1px solid black;
+    position: absolute;
+    text-align: center;
+}
+.subtitle h1 {
+    color: white;
+    font-weight: lighter;
 }
 
 .sidebar {
