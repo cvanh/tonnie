@@ -38,37 +38,44 @@
 
             
             <?php
-            // var_dump($_POST);
             // why doesnt shit work why just why https://www.youtube.com/watch?v=k238XpMMn38 
-
-
             $username = htmlspecialchars($_POST['gebruikersnaam']);
-            $comment = htmlspecialchars($_POST['comment']);
-            $wachtwoord = htmlspecialchars($_POST['wachtwoord']);
-            echo($username . $comment . $wachtwoord);
+            echo("comment is verstuurd met die<br>");
+            // echo htmlspecialchars($_POST['gebruikersnaam']);
+            echo("<br>");
+            echo ($gebruikersnaam);
+            echo htmlspecialchars($_POST['comment']);
+            echo("<br>");
+            echo htmlspecialchars($_POST['wachtwoord']);
+		
+            ?>
+
+
+            <!-- <p>plaats comment</p>
+            <form method='post' action="./createcomment.php">
+                <label for="fname">gebruikersnaam</label>
+                <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br><br>
+                <label for="lname">comment</label>
+                <input type="text" id="comment" name="comment"><br><br>
+                <label for="fname">wachtwoord</label>
+                <input type="text" id="wachtwoord" name="wachtwoord"><br><br>
+                <input type="submit" value="Submit"> -->
+            <!-- </form> -->
+            <!--INSERT INTO `comment` (`id`, `gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`, `wachtwoord`) VALUES ('$id', '$username', '$date', '$id_comment', '$id_artikel', '$comment', '$score', '$password'); -->
+            <!--  -->
+            <!-- // if ($_SERVER["REQUEST_METHOD"] =="POST") { //TODO de persoon wordt duur gestuurd met een id en die wordt automatish ingevuld
+            // $gebruikersnaam = gebruikersnaam($_post["gebruikersnaam"]);
+            // $comment = comment($_post["comment"]);
+            // $wachtwoord = wachtwoord($_post["wachtwoord"]);  
+
+            // echo ($gebruikersnaam . $comment . $wachtwoord);
+            // }
+
             
-            $servername = "83.162.165.175";
-            include'../login.php';
-            $dbname = "comments";
-            
-            // maakt die connectie
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // error debugging like als eht domein ofline is dan krijg je dit wss 
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) 
-            VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
-            
-            if ($conn->query($sql) === TRUE) {
-              echo "comment is geplaats";
-            } else {
-              echo "fout: " . $sql . "<br>" . $conn->error;
-            }
-            
-            $conn->close();
-	 ?>
+		// test 
+             -->
+
+
 
         </div>
 

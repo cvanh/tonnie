@@ -45,7 +45,7 @@ page templates - dit spreekt voor zich zelf in deze folder zitten templates voor
 assets - hier in staan fotos en shit
 
 
-yo
+
 ---
 
 begrippenlijst
