@@ -44,6 +44,12 @@ artikelen - hier in staan de artikel paginas die worden getoond als de gebruiker
 page templates - dit spreekt voor zich zelf in deze folder zitten templates voor paginas LET OP DIT KAN IEDER MOMENT VERANDEREN
 assets - hier in staan fotos en shit
 
+TODOS
+baran:
+
+conto:
+
+max:
 
 
 ---
