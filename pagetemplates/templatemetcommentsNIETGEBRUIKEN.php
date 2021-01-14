@@ -52,7 +52,7 @@
 
                 include 'login.php'; //in dit bestanden staan de login gegevens LET OP CHECK OF DIT AL AAN JE .gitignore STAAT
                 $servername = "83.162.165.175";
-                $dbname = "comment";
+                $dbname = "comments";
                 $artikel_nummer = "1"; //DIT IS BELANGERIJK VOER HIER HET ARTIKEL NUMMER IN OM TE KUNNEN SORTEREN IN HET DATABASE
                 // $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
 
@@ -63,7 +63,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT * FROM `comment` WHERE id_artikel=" . $artikel_nummer; // haalt alle comments er uit die niet van de correcte artikel zijn
+                $sql = "SELECT * FROM `comments` WHERE id_artikel=" . $artikel_nummer; // haalt alle comments er uit die niet van de correcte artikel zijn
 
                 $result = $conn->query($sql);
 

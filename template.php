@@ -66,7 +66,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT * FROM `comments` WHERE id_artikel=" . $artikel_nummer; // haalt alle comments er uit die niet van de correcte artikel zijn
+                $sql = "SELECT * FROM `comment` WHERE id_artikel=" . $artikel_nummer; // haalt alle comments er uit die niet van de correcte artikel zijn
 
                 $result = $conn->query($sql);
 
