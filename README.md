@@ -46,10 +46,13 @@ assets - hier in staan fotos en shit
 
 TODOS
 baran:
-
+samenvoegen 
 conto:
-
+create comments doen 
 max:
+
+
+
 
 
 ---

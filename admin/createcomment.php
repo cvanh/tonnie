@@ -16,7 +16,7 @@
     <!-- start tempplate-->
     <div class="header"></div>
     <div class="logo">
-        <img src="assets/fotos/logo.png" alt="logo tonny's">
+        <img src="..//assets/fotos/logotonnys.png" alt="logo tonny's">
     </div>
     <div class="sidebar">
         <ul>
@@ -38,36 +38,51 @@
 
             
             <?php
-            // var_dump($_POST);
+             var_dump($_POST);
             // why doesnt shit work why just why https://www.youtube.com/watch?v=k238XpMMn38 
 
-
-            $username = htmlspecialchars($_POST['gebruikersnaam']);
-            $comment = htmlspecialchars($_POST['comment']);
-            $wachtwoord = htmlspecialchars($_POST['wachtwoord']);
-            echo($username . $comment . $wachtwoord);
             
-            $servername = "83.162.165.175";
-            include'../login.php';
-            $dbname = "comments";
+            $gebruikersnaam_comment = htmlspecialchars($_POST['gebruikersnaam_comment']);
+            $comment = htmlspecialchars($_POST['comment']); //ik heb dit niet comment_comment genoemd omdat dit niet werkte
+            // $wachtwoord_comment = htmlspecialchars($_POST['wachtwoord_comment']); gescrapt idee
+            $comment = htmlspecialchars($_POST['id_artikel']);
+            echo($gebruikersnaam_comment . $comment );
             
-            // maakt die connectie
+            $servername = "83.162.165.175"; // constatnijns server
+            include'../login.php'; // haalt de $username en $password uit een extern bestand wat niet wordt geupload
+            $dbname = "comments"; // de database heet comments 
+            
+            // maakt de connectie
             $conn = new mysqli($servername, $username, $password, $dbname);
             // error debugging like als eht domein ofline is dan krijg je dit wss 
             if ($conn->connect_error) {
               die("Connection failed: " . $conn->connect_error);
             }
             
-            $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) 
-            VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
+            /*
+            oke dus de volgende dingen worden opgehaald
+            gebruikersnaamX
+            datumX
+            id_comment uuh auto increment in de database aanzetten en fixen
+            id_artikel
+            comment X
+            score MHE 
+            hier onder vindt je de variable op de zelfde volgorde als ze ^^ staan 
+             */
+            $date = date("i:s"); // haalt de datum op in uren:minuten
+
             
-            if ($conn->query($sql) === TRUE) {
-              echo "comment is geplaats";
-            } else {
-              echo "fout: " . $sql . "<br>" . $conn->error;
-            }
+
+            // $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) 
+            // VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
             
-            $conn->close();
+            // if ($conn->query($sql) === TRUE) {
+            //   echo "comment is geplaats";
+            // } else {
+            //   echo "fout: " . $sql . "<br>" . $conn->error;
+            // }
+            
+            $conn->close(); // sluit de connectie na deze line geen database code plaatsen anders werkt het niet 
 	 ?>
 
         </div>

@@ -40,11 +40,13 @@
             <div link>maak comment</div>
             <form method='post' action="./admin/createcomment.php">
                 <label for="fname">gebruikersnaam</label>
-                <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br><br>
+                <input type="text" id="gebruikersnaam_comment" name="gebruikersnaam_comment"><br><br>
                 <label for="lname">comment</label>
                 <input type="text" id="comment" name="comment"><br><br>
-                <label for="fname">wachtwoord</label>
-                <input type="text" id="wachtwoord" name="wachtwoord"><br><br>
+                <label for="lname">artikel nummer</label>
+                <input type="text" id="id_artikel" name="id_artikel" value="1" readonly>
+                <!-- <label for="fname">wachtwoord</label>
+                <input type="text" id="wachtwoord_comment" name="wachtwoord_comment"><br><br> -->
                 <input type="submit" value="Submit">
             </form>
 
@@ -76,6 +78,7 @@
                     echo "er zijn nog geen comments geplaats";
                 }
                 $conn->close();
+                
                 ?>
                 ></div>
         </div>
