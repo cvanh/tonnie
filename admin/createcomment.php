@@ -30,60 +30,61 @@
     <!--einde template -->
     <div id="artikelen">
         <div id="artikel1">
-
+            <p></p>
             <h1>comment is geplaats</h1>
             <a href="../tonnys.html">ga terug naar artikelen</a>
             <br>
 
 
-            
+
             <?php
-             var_dump($_POST);
+            //  var_dump($_POST);
             // why doesnt shit work why just why https://www.youtube.com/watch?v=k238XpMMn38 
 
-            
+
             $gebruikersnaam_comment = htmlspecialchars($_POST['gebruikersnaam_comment']);
             $comment = htmlspecialchars($_POST['comment']); //ik heb dit niet comment_comment genoemd omdat dit niet werkte
             // $wachtwoord_comment = htmlspecialchars($_POST['wachtwoord_comment']); gescrapt idee
-            $comment = htmlspecialchars($_POST['id_artikel']);
-            echo($gebruikersnaam_comment . $comment );
-            
+            $id_artikel = htmlspecialchars($_POST['id_artikel']);
+            echo ($gebruikersnaam_comment . "" . $comment);
+
             $servername = "83.162.165.175"; // constatnijns server
-            include'../login.php'; // haalt de $username en $password uit een extern bestand wat niet wordt geupload
+            include '../login.php'; // haalt de $username en $password uit een extern bestand wat niet wordt geupload
             $dbname = "comments"; // de database heet comments 
-            
+
             // maakt de connectie
             $conn = new mysqli($servername, $username, $password, $dbname);
             // error debugging like als eht domein ofline is dan krijg je dit wss 
             if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
+                die("Connection failed: " . $conn->connect_error);
             }
-            
+
             /*
             oke dus de volgende dingen worden opgehaald
             gebruikersnaamX
             datumX
             id_comment uuh auto increment in de database aanzetten en fixen
-            id_artikel
+            id_artikelX
             comment X
             score MHE 
             hier onder vindt je de variable op de zelfde volgorde als ze ^^ staan 
              */
-            $date = date("i:s"); // haalt de datum op in uren:minuten
+            $date = date("Y:m:d:i:s"); // haalt de datum op in uren:minuten
 
-            
 
-            // $sql = "INSERT INTO `comments` (`gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`) 
-            // VALUES (\'gebruikersnaam\', \'2020-12-22\', \'1\', \'200\', \'comment\', \'696969\')";
+
+            $sql = "INSERT INTO `comment` (`id`, `gebruikersnaam`, `datum`, `id_comment`, `id_artikel`, `comment`, `score`, `wachtwoord`) VALUES ('$id_artikel', '$gebruikersnaam_comment', '$date', NULL, '1', '$comment', NULL, '');";
             
+            $result = $conn->query($sql);
+
             // if ($conn->query($sql) === TRUE) {
-            //   echo "comment is geplaats";
+            //     echo "comment is geplaats";
             // } else {
-            //   echo "fout: " . $sql . "<br>" . $conn->error;
+            //     echo "fout: " . $sql . "<br>" . $conn->error;
             // }
-            
+
             $conn->close(); // sluit de connectie na deze line geen database code plaatsen anders werkt het niet 
-	 ?>
+            ?>
 
         </div>
 
