@@ -16,7 +16,7 @@
     <!-- start tempplate-->
     <div class="header"></div>
     <div class="logo">
-        <img src="./assets/fotos/logo.png" alt="logo tonny's" width="200px">
+        <img src="assets/fotos/logotonnys.png" alt="logo tonny's" width="200px">
     </div>
     <div class="sidebar">
       <ul>
